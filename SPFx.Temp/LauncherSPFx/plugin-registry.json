@@ -1,0 +1,24 @@
+[
+  {
+    "id": "site-picker",
+    "title": "Site Picker",
+    "version": "1.0.0",
+    "description": "Search and select SharePoint sites",
+    "url": "https://tenant.sharepoint.com/sites/central/AppAssets/site-picker/site-picker.js",
+    "requiredScopes": ["Sites.Read.All"],
+    "minimumRoles": ["User"],
+    "dataAccess": ["SharePoint"],
+    "dependencies": []
+  },
+  {
+    "id": "data-viewer",
+    "title": "Data Viewer",
+    "version": "1.0.0",
+    "description": "View SharePoint lists and Dataverse tables",
+    "url": "https://tenant.sharepoint.com/sites/central/AppAssets/data-viewer/data-viewer.js",
+    "requiredScopes": ["Sites.Read.All"],
+    "minimumRoles": ["User"],
+    "dataAccess": ["SharePoint", "Dataverse"],
+    "dependencies": []
+  }
+]

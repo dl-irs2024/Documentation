@@ -1,0 +1,15 @@
+{
+  "extends": "@microsoft/heft-spfx-preset/profiles/default",
+  "heftMetaVersion": "0.48.0",
+  "eventActions": [
+    {
+      "eventName": "pre-compile",
+      "actionKind": "copyFiles",
+      "actionProperties": {
+        "sourceFolder": "src/webparts",
+        "destinationFolder": "temp/webparts",
+        "includeGlobs": ["**/*.manifest.json"]
+      }
+    }
+  ]
+}
