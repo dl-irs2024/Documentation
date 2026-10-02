@@ -1,0 +1,9 @@
+{
+  "id": "site-picker",
+  "title": "Site Picker",
+  "version": "1.0.0",
+  "description": "Search and select SharePoint sites",
+  "requiredScopes": ["Sites.Read.All"],
+  "minimumRoles": ["User"],
+  "dataAccess": ["SharePoint"]
+}

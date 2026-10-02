@@ -1,0 +1,166 @@
+@import '~@fluentui/react/lib/index';
+
+.launcherHost {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+  background-color: $ms-color-themeLighter;
+  border-radius: 4px;
+  min-height: 200px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid $ms-color-themePrimary;
+    padding-bottom: 12px;
+
+    h2 {
+      margin: 0;
+      color: $ms-color-themePrimary;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .debugBadge {
+      background-color: #fff4ce;
+      color: #cc8800;
+      padding: 4px 8px;
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .pluginContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pluginWrapper {
+    border: 1px solid $ms-color-themeLight;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .pluginHeader {
+      background-color: $ms-color-themeLighter;
+      padding: 12px;
+      border-bottom: 1px solid $ms-color-themeLight;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: $ms-color-themePrimary;
+      }
+
+      .pluginId {
+        font-size: 11px;
+        color: $ms-color-themeDark;
+        background-color: white;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+    }
+
+    .pluginContent {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+      max-height: 600px;
+    }
+  }
+
+  .loadingContainer,
+  .errorContainer,
+  .emptyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    gap: 16px;
+    padding: 32px;
+    text-align: center;
+
+    h3 {
+      margin: 0;
+      color: $ms-color-themePrimary;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0;
+      color: $ms-color-themeDark;
+      font-size: 14px;
+      max-width: 400px;
+    }
+  }
+
+  .loadingContainer {
+    color: $ms-color-themePrimary;
+    font-size: 16px;
+  }
+
+  .errorContainer {
+    background-color: #fde7e7;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    padding: 32px;
+
+    h3 {
+      color: #721c24;
+    }
+
+    p {
+      color: #721c24;
+    }
+
+    .retryButton {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #c82333;
+      }
+    }
+  }
+
+  .emptyContainer {
+    background-color: #e8eef7;
+    border: 1px solid #8cb8f0;
+    border-radius: 4px;
+
+    p {
+      color: #003478;
+    }
+  }
+}

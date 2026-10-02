@@ -1,0 +1,9 @@
+{
+  "id": "data-viewer",
+  "title": "Data Viewer",
+  "version": "1.0.0",
+  "description": "View SharePoint lists and Dataverse tables",
+  "requiredScopes": ["Sites.Read.All"],
+  "minimumRoles": ["User"],
+  "dataAccess": ["SharePoint", "Dataverse"]
+}

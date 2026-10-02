@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/v1.23/web-part-manifest.schema.json",
+
+  "id": "launcher-host-webpart",
+  "alias": "LauncherHostWebPart",
+  "componentType": "WebPart",
+
+  "manifestVersion": 2,
+  "loadingIndicatorDelayMs": 1500,
+
+  "version": "1.0.0",
+  "requiredMinimumSharePointVersion": "16.0.23330.12000",
+
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c175409-0fbf-4389-a1b6-5454cd3aebef",
+      "group": { "default": "Other" },
+      "title": { "default": "Pluggable SPFx Launcher" },
+      "description": {
+        "default": "Dynamic plugin host for loading SharePoint plugins from a registry"
+      },
+      "officeFabricIconFontName": "PlugConnect",
+      "properties": {
+        "title": "Pluggable SPFx Launcher",
+        "registryUrl": "",
+        "enableDebugMode": false
+      }
+    }
+  ],
+
+  "disabledOnClassicSharePoint": false,
+  "isInternal": false,
+
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab"],
+
+  "safeWithCustomTheme": true
+}
